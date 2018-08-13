@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<h:title>Cadastro de Produtos</h:title>
+</head>
+<h:body>
+	<h:form>
+		<div>
+			<h:outputLabel>Título do Livro</h:outputLabel>
+			<h:inputText value="#{adminBooksBean.book.titulo}"></h:inputText>
+		</div>
+		<div>
+			<h:outputLabel>Descrição</h:outputLabel>
+			<h:inputTextarea cols="20" rows="10" value="#{adminBooksBean.book.descricao}"></h:inputTextarea>
+		</div>
+		<div>
+			<h:outputText>Número de páginas</h:outputText>
+			<h:inputText value="#{adminBooksBean.book.numeroDePaginas}"></h:inputText>
+		</div>
+		<div>
+			<h:outputLabel>Preço</h:outputLabel>
+			<h:inputText value="#{adminBooksBean.book.preco}"></h:inputText>
+		</div>
+		<h:commandButton value="Gravar" action="#{adminBooksBean.save}"></h:commandButton>
+	</h:form>
+</h:body>
+</html>
